@@ -7,6 +7,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*
+	1 color(orange): #F74700
+	2 color(brown): #B53A25
+	3 light brown: #A88771
+	4  green: #91A88C
+	5  medium green: #677662
+	6 darkgreen: #2B3531
+
+*/
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -31,6 +41,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	color: rgb(12, 12, 12);
 }
 
 ol, ul {
@@ -83,7 +94,8 @@ input, select, textarea {
 	}
 
 	html, body {
-		background: #1c1d26;
+		color: #91A88C;
+		background-color: black;
 	}
 
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2962,6 +2974,7 @@ input, select, textarea {
 			top: 50%;
 			width: 2em;
 			z-index: 1;
+			filter: invert(100%);
 		}
 
 /* Spotlight */
@@ -3449,10 +3462,11 @@ input, select, textarea {
 
 /* Banner */
 
+
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/banner.png");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -3471,10 +3485,10 @@ input, select, textarea {
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			/*background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
 			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
 			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;*/
 			content: '';
 			display: block;
 			height: 100%;
@@ -3503,11 +3517,15 @@ input, select, textarea {
 				#banner .content header h2 {
 					font-size: 2.5em;
 					margin: 0;
+					color: black;
+					font-weight: bold;
 				}
 
 				#banner .content header p {
 					margin: 0.5em 0 0 0;
 					top: 0;
+					font-weight: bold;
+					color:black;
 				}
 
 			#banner .content .image {
@@ -3519,11 +3537,38 @@ input, select, textarea {
 				width: 18em;
 			}
 
-				#banner .content .image img {
-					border-radius: 100%;
-					display: block;
-					width: 100%;
-				}
+			#banner .content .image img {
+				border-radius: 100%;
+				display: block;
+				width: 100%;
+			}/*
+	1 color(orange): #F74700
+	2 color(brown): #B53A25
+	3 light brown: #A88771
+	4  green: 
+	5  medium green: 
+	6 darkgreen: 
+
+*/
+			#banner div a button{
+					display: inline-block;
+					text-decoration: none;
+					color: black;
+					border: 1px solid #fff;
+					padding: 12px 34px;
+					font-size:  13px;
+					position: relative;
+					cursor: pointer;
+					border-radius: 5px;			
+			}
+			#banner div a button:hover{
+				border:1px solid #06b9d8;
+				background: linear-gradient(#969eaa,rgba(0,0,0,0.6));
+				font-size: 15px;
+				transition: 1s;
+			}
+			
+
 
 	body.is-touch #banner {
 		background-attachment: scroll;
@@ -3832,7 +3877,15 @@ input, select, textarea {
 				display: none;
 			}
 
-		/* Banner */
+		/* Banner *//*
+	1 color(orange): #F74700
+	2 color(brown): #B53A25
+	3 light brown: #A88771
+	4  green: #91A88C
+	5  medium green: #677662
+	6 darkgreen: #2B3531
+
+*/
 
 			#banner {
 				box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -4109,3 +4162,52 @@ input, select, textarea {
 					}
 
 	}
+
+
+
+
+	.accordion{
+		max-width: 800px;
+	}
+	.accordion .contentBx{
+		position: relative;
+		margin: 10px 20px;
+	
+	}
+	.accordion :first-child{
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+	.accordion .contentBx .label{
+		position: relative;
+		padding: 10px;
+		background: rgb(78, 243, 174);
+		cursor: pointer;
+	}
+	.accordion .contentBx .label::before{
+		content: '+';
+		align-items: center;
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translate(-50%);
+		font-size: 1.5em;
+	}
+	.accordion .contentBx.active .label::before{
+		content: '-';
+	
+	}
+	.accordion .contentBx .content{
+		position: relative;
+	
+		background: rgb(124, 124, 184);
+		height:0;
+		overflow:hidden;
+		transition: 0.5s;
+		overflow-y: auto;
+	}
+	.accordion .contentBx.active .content{
+		height: 150px;
+		padding: 10px;
+	}
+
